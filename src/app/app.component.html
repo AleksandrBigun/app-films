@@ -1,7 +1,8 @@
-<h1>
-  {{title}}
-  {{subtitle + number}}
-  <p [textContent]="subtitle + number + 'application'" ></p>
-</h1>
+<md-toolbar>
+    <h1>{{title}} - {{subtitle}}</h1>
+</md-toolbar>
 
-<app-film-card></app-film-card>
+<div class="app-content">
+	<app-film-card></app-film-card>
+</div>
+
