@@ -8,11 +8,18 @@ md-toolbar {
     background-color: #f1f1f1;
     box-shadow: 0 1px 18px 0 rgba(0, 0, 0, .22);
     z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 md-toolbar h1 {
   font-size: 16px;
 }
 
+.mainbar {
+  padding: 65px 0 0;
+}
 .app-content {
     margin: 50px auto;
     padding: 0 15px;
