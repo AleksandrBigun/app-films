@@ -23,9 +23,8 @@ export class FilmCardComponent implements OnInit {
 			return;
 		}
 		this.filmCardService.getFilms(this.filmName).subscribe(data => {
-	  	this.filmList = data;
+	  		this.filmList = data;
 	  	});
 	}
-
 
 }

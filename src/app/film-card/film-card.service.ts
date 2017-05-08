@@ -7,13 +7,13 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class FilmCardService {
 	url: string = 'http://www.omdbapi.com/?page=1&s=';
+  
   constructor(private http: Http) { }
 
   private extractData(res: Response) {
   	let body = res.json();
 
-  	return body.Search || {};
-
+  	return body.Search || [];
   }
 
   getFilms(filmName: string) {
