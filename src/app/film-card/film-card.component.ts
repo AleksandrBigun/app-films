@@ -26,5 +26,8 @@ export class FilmCardComponent implements OnInit {
 	  		this.filmList = data;
 	  	});
 	}
+	private isFilmImageAvailable(film) {
+		if (film.Poster != 'N/A') return true;  
+	}
 
 }

@@ -6,7 +6,8 @@
 </form>
 <div class="film-cards-container">
     <md-card class="film-card" *ngFor="let film of filmList">
-        <img md-card-image *ngIf="film.Poster != 'N/A'" src="{{film.Poster}}">
+        <img md-card-image *ngIf="isFilmImageAvailable(film)" src="{{film.Poster}}">
+        <div *ngIf="!isFilmImageAvailable(film)" class="picture-cap">Picture is not available</div>
         <md-card-content>
             <md-card-title>{{film.Title}}</md-card-title>
             <p>{{film.Year}}</p>

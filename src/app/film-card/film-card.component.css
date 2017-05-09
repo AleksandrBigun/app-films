@@ -32,6 +32,10 @@
     margin-bottom: 50px;
     box-sizing: border-box;
 }
-.mat-card-image {
+.film-card .mat-card-image {
 	border-radius: 2px 2px 0 0;
+}
+.film-card .picture-cap {
+	color: grey;
+	margin: 0 0 30px;
 }
