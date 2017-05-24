@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class FilmCardService {
-	url: string = 'http://www.omdbapi.com/?page=1&s=';
+	url: string = 'http://www.omdbapi.com/?apikey=520bbe17&page=1&s=';
   
   constructor(private http: Http) { }
 
