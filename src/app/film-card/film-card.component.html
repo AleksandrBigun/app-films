@@ -1,20 +1,14 @@
-<form class="search-form">
-    <md-input-container>
-        <input mdInput placeholder="Film name" name="filmName" [(ngModel)]="filmName" (keyup.enter)="getFilms()">
-    </md-input-container>
-    <button md-button (click)="getFilms()">Search</button>
-</form>
-<div class="film-cards-container">
-    <md-card class="film-card" *ngFor="let film of filmList">
-        <img md-card-image *ngIf="isFilmImageAvailable(film)" src="{{film.Poster}}">
-        <div *ngIf="!isFilmImageAvailable(film)" class="picture-cap">Picture is not available</div>
-        <md-card-content>
-            <md-card-title>{{film.Title}}</md-card-title>
-            <p>{{film.Year}}</p>
-            <p>{{film.Plot}}</p>
-        </md-card-content>
-        <md-card-actions>
-            <button md-button>Read more</button>
-        </md-card-actions>
-    </md-card>
-</div>
+
+		<md-card class="film-card">
+			<img md-card-image src="{{filmItem.Poster}}">
+			<md-card-content>
+				<md-card-title>{{filmItem.Title}}</md-card-title>
+				<p>Релиз: {{filmItem.Released}}</p>
+				<p>{{filmItem.Plot}}</p>
+			</md-card-content>
+			<md-card-actions>
+				<button md-button>Подробнее</button>
+			</md-card-actions>
+		</md-card>
+
+
