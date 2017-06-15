@@ -6,26 +6,25 @@ import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 
-
 import { AppComponent } from './app.component';
-import { ProductCardComponent } from './product-card/product-card.component';
 import { FilmCardComponent } from './film-card/film-card.component';
-import { FilmCardService } from './film-card/film-card.service';
+import { FilmService } from './film.service';
+import { FilmListComponent } from './film-list/film-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductCardComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    FilmListComponent
   ],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [FilmCardService],
+  providers: [FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

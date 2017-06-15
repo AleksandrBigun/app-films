@@ -1,6 +1,3 @@
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-
-
 html {
     height: 100%;
 }
@@ -13,4 +10,7 @@ body {
 .loading {
     height: 100px;
     width: 130px;
+}
+.mat-toolbar-row {
+    justify-content: space-between;
 }
