@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {FilmService} from '../film.service'
 
 @Component({
@@ -8,19 +8,14 @@ import {FilmService} from '../film.service'
 })
 export class FilmListComponent implements OnInit {
 
-  filmList : Object[] = []
-  filmName : string; 
-  constructor(private filmCardService: FilmService) { }
+  filmList : Object[] = [];
 
-  ngOnInit() {
-    this.filmName = "Lord"
-    this.getFilms();
-  }
+  constructor() {}
 
-  private getFilms(){
-    if(!this.filmName) {return;}
-    this.filmCardService.getFilms(this.filmName).subscribe(data => {
-      this.filmList = data;
-    })
+  ngOnInit() {}
+
+  private showFilms(e) {
+    if(!e) {return;}
+    this.filmList = e;
   }
 }
