@@ -12,10 +12,12 @@ export class FilmListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   private showFilms(e) {
     if(!e) {return;}
     this.filmList = e;
+    console.log(this.filmList);
   }
 }

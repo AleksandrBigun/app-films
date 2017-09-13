@@ -1,13 +1,13 @@
 
-		<md-card class="film-card">
-			<img md-card-image src="{{filmItem.Poster}}">
+		<md-card class="film-card">  
+			  <img md-card-image src="https://image.tmdb.org/t/p/w500/{{filmItem.poster_path}}">
 			<md-card-content>
-				<md-card-title>{{filmItem.Title}}</md-card-title>
-				<p>Релиз: {{filmItem.Released}}</p>
-				<p>{{filmItem.Plot}}</p>
+				<md-card-title>{{filmItem.original_title}}</md-card-title>
+				<p>Релиз: {{filmItem.release_date}}</p>
+				<p>{{filmItem.overview}}</p>
 			</md-card-content>
 			<md-card-actions>
-				<button md-button>Подробнее</button>
+				<button md-button>Подробнее</button>  
 			</md-card-actions>
 		</md-card>
 

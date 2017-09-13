@@ -4,14 +4,14 @@ import { Observable } from 'rxjs/Observable'
 
 @Injectable()
 export class FilmService {
-  searchUrl: string = "http://www.omdbapi.com/?apikey=520bbe17&page=1&s=";
-  filmUrl: string = "http://www.omdbapi.com/?apikey=520bbe17&i=";
+  searchUrl: string = "https://api.themoviedb.org/3/search/movie?api_key=7fbd961705871c0138a5daaa6426f123&page=1&query=";
+  filmUrl: string = "https://api.themoviedb.org/3/movie/";
   
   constructor(private http: Http) { }
 
   private extractListData(res: Response) {
     let body = res.json();
-    return body.Search || {};
+    return body.results || {};
   }
 
   private extractItemData(res: Response) {
@@ -24,7 +24,7 @@ export class FilmService {
   }
 
   getFilmById (filmId: string) {
-    return this.http.get(this.filmUrl + filmId).map(this.extractItemData);
+    return this.http.get(this.filmUrl + filmId + '?api_key=7fbd961705871c0138a5daaa6426f123&language=en-US').map(this.extractItemData);
   }
 
 }

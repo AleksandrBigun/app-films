@@ -8,7 +8,7 @@ import {FilmService} from '../../film.service'
 })
 export class SearchComponent implements OnInit {
 
-  filmList : Object[] = []
+  filmList : Object[] = [];
   filmName : string; 
 
   constructor(private filmCardService: FilmService) { }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {FilmService} from '../film.service'
 
 @Component({
   selector: 'film-card',
@@ -8,15 +7,9 @@ import {FilmService} from '../film.service'
 })
 export class FilmCardComponent implements OnInit {
   @Input()
-  filmId: string; 
   filmItem: {} = {};
-  constructor(private filmCardService: FilmService) { }
 
   ngOnInit() {
-    if(!this.filmId) {return;}
-    this.filmCardService.getFilmById(this.filmId).subscribe(data => {
-      this.filmItem = data;
-    })
   }
 
 }
