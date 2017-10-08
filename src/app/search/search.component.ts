@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {FilmService} from '../../film.service'
+import {FilmService} from '../film.service'
 
 @Component({
   selector: 'app-search',

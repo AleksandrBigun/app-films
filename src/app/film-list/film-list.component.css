@@ -1,4 +1,16 @@
 .app-content {
    margin: 50px auto; 
    max-width: 884px;
+   padding: 0 15px;
+}
+
+.list-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.list-tiles-item {
+    max-width: 49%;
 }
