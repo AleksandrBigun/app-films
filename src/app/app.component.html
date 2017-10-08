@@ -2,7 +2,7 @@
   <button (click)="sidenav.toggle()" class="toolbar-button" md-mini-fab><md-icon>menu</md-icon></button>
   <div class="toolbar-button-row">
     <a md-button
-      *ngFor="let topLink of links" href="#">
+      *ngFor="let topLink of links" href="#" [routerLink]="topLink.path">
       <md-icon>{{topLink.icon}}</md-icon> &nbsp; {{topLink.label}}
     </a>
   </div>
@@ -15,14 +15,14 @@
       <a md-button
         class="nav-link"
         *ngFor="let link of links"
-        href="#">
+        href="#"
+        routerLink="link.path">
         <md-icon>{{link.icon}}</md-icon> &nbsp; {{link.label}}
       </a>
     </nav>
   </md-sidenav>
-
   <div class="app-content">
-    <film-list></film-list>
+    <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>
 
